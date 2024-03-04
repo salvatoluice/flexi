@@ -1,9 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {rs} from '../../../../utils/styles/responsiveSize';
+import { StyleSheet } from 'react-native';
+import { rs } from '../../../../utils/styles/responsiveSize';
 
 export const customButtonStyle = (
   colors,
-  bgColor = colors.cornflowerBlue,
+  bgColor = colors.yellow, 
   color = colors.white,
   disabled,
   icon,
