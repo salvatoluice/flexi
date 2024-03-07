@@ -24,7 +24,7 @@ import {useRef} from 'react';
 import {useCallback} from 'react';
 import {handleLogOut} from '../utilities/handleLogout/handleLogout';
 import {useState} from 'react';
-import {withdrawSettingsStyle} from '../Withdraw/Withdraw Settings/WithdrawSettings.style';
+import {withdrawSettingsStyle} from '../Withdraw/WithdrawSettings/WithdrawSettings.style';
 import {modalBottomSheetStyle} from '../components/components/Modals/ModalBottomSheet/modalBottomSheet.style';
 import ButtonOutline from '../components/Buttons/ButtonOutline/ButtonOutline';
 import {homeStyle} from './home.style';
@@ -48,8 +48,9 @@ const Home = ({navigation}) => {
   const {
     user: {first_name, last_name, token, picture},
   } = useSelector(state => state.loginUserReducer);
+
   useEffect(() => {
-    const url = `${config.BASE_URL_VERSION}/withdrawal-setting/payment-methods`;
+    const url = `https://flexirewards.club/api/withdrawal-setting/payment-methods`;
     dispatch(getWithdrawalMethods({token, url}));
     dispatch(getMyWallets({token}));
   }, [dispatch]);

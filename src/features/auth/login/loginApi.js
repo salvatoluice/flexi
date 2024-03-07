@@ -11,7 +11,6 @@ export const postLoginInfo = async (obj, URL, method) => {
       return res.json();
     })
     .then(data => {
-      // console.log('Response data:', data);
       return data;
     })
     .catch(err => {

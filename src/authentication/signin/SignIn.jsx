@@ -74,11 +74,11 @@ const SignIn = ({ navigation }) => {
     async function checkLoginPreferences() {
       const URL = `https://flexirewards.club.api/preference/check-login-via`;
       const loginViaRes = await getInfo('token', URL);
-      console.log(loginViaRes.response);
-      // if (loginViaRes?.response?.status?.code == 200) {
-      //   const { loginVia } = loginViaRes?.response?.records;
-      //   setLoginVia(loginVia);
-      // }
+      // console.log(loginViaRes.response);
+      if (loginViaRes?.response?.status == 200) {
+        const { loginVia } = loginViaRes?.response?.records;
+        setLoginVia(loginVia);
+      }
     }
     checkLoginPreferences();
   }, [isFocused]);
