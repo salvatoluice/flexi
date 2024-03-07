@@ -12,8 +12,11 @@ const initialState = {
 export const loginUser = createAsyncThunk('user', async obj => {
   try {
     const res = await postLoginInfo(obj, URL, 'post');
-    return res;
-  } catch (err) {}
+    return res; 
+  } catch (err) {
+    console.error('Login failed:', err);
+    throw err;
+  }
 });
 
 export const loginSlice = createSlice({
@@ -38,10 +41,11 @@ export const loginSlice = createSlice({
       state.loginLoader = true;
     });
     builder.addCase(loginUser.fulfilled, (state, {payload: {response}}) => {
-      if (response.status.code != 200) {
+      // console.log(response.status);
+      if (response.status != 200) {
         state.user = null;
         state.loginLoader = false;
-      } else if (response.status.code == 200) {
+      } else if (response.status == 200) {
         state.user = response.records;
         state.loginLoader = false;
       }

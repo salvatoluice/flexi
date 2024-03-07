@@ -1,6 +1,5 @@
 import React from 'react';
 import {LogBox, StatusBar} from 'react-native';
-// As we don't use deep link to the screen which accepts functions in params
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
@@ -26,8 +25,7 @@ const App = () => {
   const {colors} = useTheme();
   const style = homeStyle(colors);
   useEffect(() => {
-    if (language) {
-      i18n.changeLanguage(language);
+    if (language) {      i18n.changeLanguage(language);
     }
   }, [language]);
   return (

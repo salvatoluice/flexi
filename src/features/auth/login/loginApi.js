@@ -7,11 +7,16 @@ export const postLoginInfo = async (obj, URL, method) => {
     },
     body: JSON.stringify(obj),
   })
-    .then(res => res.json())
+    .then(res => {
+      return res.json();
+    })
     .then(data => {
+      // console.log('Response data:', data);
       return data;
     })
-    .catch(err => {});
+    .catch(err => {
+      console.error('Error:', err);
+    });
 };
 
 export const getInfo = async (access_token, URL) => {
