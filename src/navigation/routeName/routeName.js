@@ -71,7 +71,7 @@ export const EDIT_WITHDRAW_SETTINGS = 'Manage Withdraw Option';
 
 export const OFFLINE_SCREEN = 'OfflINE';
 
-export const QR_PAY = 'QR Pay';
+export const QR_PAY = 'Flexi Pay';
 export const SCAN_QR_CODE = 'Scan QR Code';
 
 export const CONFIRM_STANDARD_MERCHANT = 'Confirm Standard Payment';

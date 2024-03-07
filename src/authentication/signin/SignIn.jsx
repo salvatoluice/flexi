@@ -76,7 +76,7 @@ const SignIn = ({ navigation }) => {
       const loginViaRes = await getInfo('token', URL);
       // console.log(loginViaRes.response);
       if (loginViaRes?.response?.status == 200) {
-        const { loginVia } = loginViaRes?.response?.records;
+        const { loginVia } = loginViaRes?.response;
         setLoginVia(loginVia);
       }
     }
