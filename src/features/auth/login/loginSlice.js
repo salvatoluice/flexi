@@ -12,7 +12,6 @@ const initialState = {
 export const loginUser = createAsyncThunk('user', async obj => {
   try {
     const res = await postLoginInfo(obj, URL, 'post');
-    console.log(res);
     return res; 
   } catch (err) {
     console.error('Login failed:', err);
@@ -30,7 +29,6 @@ export const loginSlice = createSlice({
     },
     retrieveUser: (state, {payload}) => {
       state.user = payload;
-      console.log(state.user);
       state.loginLoader = false;
     },
     updateUserInfo: (state, {payload}) => {
@@ -48,7 +46,6 @@ export const loginSlice = createSlice({
         state.loginLoader = false;
       } else if (response?.status == 200) {
         state.user = response;
-        console.log(response);
         state.loginLoader = false;
       }
     });

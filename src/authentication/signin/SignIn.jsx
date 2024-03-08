@@ -9,7 +9,7 @@ import {
   Image,
 } from 'react-native';
 import React, { useEffect } from 'react';
-import { MAIN_STACK, RESET_PASSWORD, SIGN_UP } from '../../navigation/routeName/routeName';
+import { RESET_PASSWORD, SIGN_UP } from '../../navigation/routeName/routeName';
 import light_logo from '../../assets/image/logo/light_logo.png';
 import dark_logo from '../../assets/image/logo/dark_logo.png';
 import { useIsFocused, useTheme } from '@react-navigation/native';
@@ -74,7 +74,6 @@ const SignIn = ({ navigation }) => {
     async function checkLoginPreferences() {
       const URL = `https://flexirewards.club.api/preference/check-login-via`;
       const loginViaRes = await getInfo('token', URL);
-      // console.log(loginViaRes.response);
       if (loginViaRes?.response?.status == 200) {
         const { loginVia } = loginViaRes?.response;
         setLoginVia(loginVia);
@@ -96,7 +95,6 @@ const SignIn = ({ navigation }) => {
 
   const handleLogin = async () => {
     const { email, password } = signInInfo;
-    console.log(signInInfo);
     if (!email || !password || !isConnected) {
       handleError();
       return;
