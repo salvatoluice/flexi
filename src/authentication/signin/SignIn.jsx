@@ -213,7 +213,7 @@ const SignIn = ({ navigation }) => {
                   </View>
                 )
               }
-              bgColor="red"
+              bgColor="#d03434"
               color={colors.white}
             />
             <Text style={accountRegisterText}>
