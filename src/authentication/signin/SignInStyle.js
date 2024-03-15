@@ -33,7 +33,7 @@ export const signInStyle = colors =>
     },
     registerText: {
       fontFamily: 'Gilroy-Semibold',
-      color: colors.textNonaryVariant,
+      color: 'red',
     },
     accountRegisterText: {
       marginTop: rs(24),

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import React, { useEffect } from 'react';
 import { RESET_PASSWORD, SIGN_UP } from '../../navigation/routeName/routeName';
-import light_logo from '../../assets/image/logo/light_logo.png';
+import light_logo from '../../assets/image/logo/dark_logo.png';
 import dark_logo from '../../assets/image/logo/dark_logo.png';
 import { useIsFocused, useTheme } from '@react-navigation/native';
 import { signInStyle } from './SignInStyle';
@@ -213,7 +213,7 @@ const SignIn = ({ navigation }) => {
                   </View>
                 )
               }
-              bgColor={colors.cornflowerBlue}
+              bgColor="red"
               color={colors.white}
             />
             <Text style={accountRegisterText}>
