@@ -13,8 +13,8 @@ export const bottomTabBarQRIconStyle = (colors, focused) =>
       width: rs(62),
       height: rs(62),
       borderRadius: rs(31),
-      backgroundColor: colors.cornflowerBlue,
-      shadowColor: colors.cornflowerBlue,
+      backgroundColor: '#d03434',
+      shadowColor: '#d03434',
       shadowOffset: {
         width: 0,
         height: 10,

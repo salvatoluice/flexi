@@ -10,7 +10,7 @@ const BottomTabBarIcon = ({title, Icon, width, height, focused}) => {
     <View style={bottomTabBarStyle.cont}>
       {typeof Icon !== 'undefined' && (
         <Icon
-          fill={focused ? colors.textTertiaryVariant : colors.tabIconUnfocused}
+          fill={focused ? '#d03434' : colors.tabIconUnfocused}
           height={height}
           width={width}
         />

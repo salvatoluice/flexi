@@ -19,7 +19,7 @@ export const bottomTabBarIconStyle = (colors, focused) =>
       alignItems: 'center',
     },
     label: {
-      color: focused ? colors.textTertiaryVariant : colors.tabIconUnfocused,
+      color: focused ? '#d03434' : colors.tabIconUnfocused,
       fontFamily: 'Gilroy-Semibold',
       fontSize: rs(10),
       lineHeight: rs(12),
