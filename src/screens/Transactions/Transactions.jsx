@@ -174,7 +174,7 @@ const Transactions = ({
             style={transactionStyle(colors).noTransactionsCard}
             text={
               isConnected
-                ? trans('No Transactions History')
+                ? trans('No records found!')
                 : trans('Your internet connection might not be working at the moment. Please check and try again.')
             }
           />
