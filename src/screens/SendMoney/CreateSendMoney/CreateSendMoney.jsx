@@ -530,7 +530,7 @@ const CreateSendMoney = ({route, navigation}) => {
                 }}
                 disabled={amountLoader ? true : false}
                 title={trans('Proceed')}
-                bgColor={colors.cornflowerBlue}
+                bgColor='#d03434'
                 color={colors.white}
               />
 

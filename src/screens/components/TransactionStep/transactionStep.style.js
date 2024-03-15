@@ -28,7 +28,7 @@ export const transactionStepStyle = (
     step: {
       backgroundColor:
         index <= presentStep
-          ? presentColor || colors.cornflowerBlue
+          ? presentColor || '#d03434'
           : defaultColor || colors.ifPrimary,
       width:
         totalStep &&

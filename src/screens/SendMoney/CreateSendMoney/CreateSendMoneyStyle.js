@@ -54,7 +54,7 @@ export const depositStyle = (...args) => {
     cancelBtn: {
       fontFamily: 'Gilroy-Semibold',
       fontSize: rs(15),
-      color: colors.textQuinary,
+      color: '#d03434',
       lineHeight: rs(18),
       paddingVertical: rs(10),
       textAlign: 'center',

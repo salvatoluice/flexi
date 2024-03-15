@@ -443,7 +443,7 @@ const CreateDeposit = ({navigation, route}) => {
                 onPress={
                   !amountLoader && !error.checkAmount ? HandleProceed : null
                 }
-                bgColor={colors.cornflowerBlue}
+                bgColor='#d03434'
                 style={styles.processed}
                 color={colors.white}
               />
