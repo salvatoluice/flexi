@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {postLoginInfo} from './loginApi';
 import config from '../../../../config';
 
-const URL = `https://agent.flexirewards.club/api/login`;
+const URL = `http://3.138.130.77/api/login`;
 
 const initialState = {
   user: null,
