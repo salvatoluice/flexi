@@ -31,13 +31,13 @@ const App = () => {
   return (
     <SafeAreaProvider style={style.safeAreaProvider}>
       <StatusBar
-        backgroundColor={theme === 'dark' ? '#2E2446' : '#392F6B'}
+        backgroundColor={theme === 'dark' ? '#d03434' : '#d03434'}
         barStyle={'light-content'}
       />
       <GestureHandlerRootView style={style.safeAreaProvider}>
         <Network>
           <NavigationContainer
-            theme={theme === 'dark' ? darkTheme : defaultTheme}>
+            theme={theme === 'dark' ? defaultTheme : defaultTheme}>
             <Root />
           </NavigationContainer>
         </Network>

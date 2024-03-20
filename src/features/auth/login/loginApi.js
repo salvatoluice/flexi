@@ -1,4 +1,8 @@
-export const postLoginInfo = async (obj, URL, method) => {
+  export const postLoginInfo = async (obj, URL, method) => {
+  console.log('Sending request to:', URL);
+  console.log('Request method:', method);
+  console.log('Request body:', obj);
+
   return fetch(URL, {
     method: method,
     headers: {
@@ -8,15 +12,18 @@ export const postLoginInfo = async (obj, URL, method) => {
     body: JSON.stringify(obj),
   })
     .then(res => {
+      console.log('Response status:', res.status);
       return res.json();
     })
     .then(data => {
+      console.log('Response data:', data);
       return data;
     })
     .catch(err => {
       console.error('Error:', err);
     });
 };
+
 
 export const getInfo = async (access_token, URL) => {
   return fetch(URL, {

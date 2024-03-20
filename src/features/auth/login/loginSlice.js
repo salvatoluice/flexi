@@ -2,7 +2,7 @@ import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {postLoginInfo} from './loginApi';
 import config from '../../../../config';
 
-const URL = `https://flexirewards.club/api/login`;
+const URL = `https://agent.flexirewards.club/api/login`;
 
 const initialState = {
   user: null,
@@ -12,6 +12,7 @@ const initialState = {
 export const loginUser = createAsyncThunk('user', async obj => {
   try {
     const res = await postLoginInfo(obj, URL, 'post');
+    console.log(res);
     return res; 
   } catch (err) {
     console.error('Login failed:', err);

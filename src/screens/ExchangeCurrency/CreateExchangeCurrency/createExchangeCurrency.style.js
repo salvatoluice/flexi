@@ -43,6 +43,7 @@ export const createExchangeCurrencyStyle = colors =>
       width: width - rs(80),
       marginBottom: rs(28),
       marginTop: rs(20),
+      backgroundColor: '#d03434',
     },
     width_80: {width: width - rs(80)},
     mt_24: {

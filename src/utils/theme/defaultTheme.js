@@ -30,7 +30,7 @@ export const defaultTheme = {
     textDenaryVariant: '#635BFE',
 
     //background
-    bgPrimary: '#392F6B',
+    bgPrimary: '#d03434',
     bgSecondary: '#F9F9FE',
     bgTertiary: '#2D1959',
     bgQuaternary: '#FFFFFF',
@@ -99,7 +99,7 @@ export const defaultTheme = {
     receivedRequestIcon: '#635BFE',
 
     //same value
-    cornflowerBlue: '#635BFE',
+    cornflowerBlue: '#d03434',
     white: '#FFFFFF',
     sunshade: '#FFAF30',
     snuff: '#E0DFEF',

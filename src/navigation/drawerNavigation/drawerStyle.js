@@ -60,7 +60,7 @@ export const drawerStyle = (colors, focused, routeName, last) =>
 export const drawerButtonStyle = colors =>
   StyleSheet.create({
     drawerCont: {
-      backgroundColor: colors.bgPrimaryVariant,
+      backgroundColor: '#d03434',
       flex: 1,
       top: 0,
       bottom: 0,

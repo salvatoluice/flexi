@@ -1,7 +1,7 @@
 import {getFocusedRouteNameFromRoute, useTheme} from '@react-navigation/native';
 import {useTranslation} from 'react-i18next';
 import {Image} from 'react-native';
-import Logo from '../../assets/image/logo/dark_logo.png';
+import Logo from '../../assets/image/logo/light_logo.png';
 import {signInStyle} from '../../authentication/signin/SignInStyle';
 
 const HeaderTitleFunc = route => {
