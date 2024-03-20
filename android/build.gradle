@@ -1,3 +1,5 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     ext {
         buildToolsVersion = "31.0.0"
@@ -22,8 +24,6 @@ buildscript {
         classpath("com.android.tools.build:gradle:7.2.1")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("de.undercouch:gradle-download-task:5.0.1")
-        // Add the bundletool dependency for AAB support
-        classpath("com.android.tools.build:bundletool:0.14.0")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -31,16 +31,16 @@ buildscript {
 
 allprojects {
     repositories {
-        exclusiveContent {
-            filter {
-                includeGroup "com.facebook.react"
-            }
-            forRepository {
-                maven {
-                    url "$rootDir/../node_modules/react-native/android"
-                }
-            }
-        }
+         exclusiveContent {
+           filter {
+               includeGroup "com.facebook.react"
+           }
+           forRepository {
+               maven {
+                   url "$rootDir/../node_modules/react-native/android"
+               }
+           }
+       }
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url("$rootDir/../node_modules/react-native/android")
@@ -58,5 +58,20 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
+    }
+
+    // Add this block to disable PNG optimization for Ionic resources
+    subprojects {
+        afterEvaluate {
+            project ->
+
+            if (project.hasProperty("android")) {
+                android {
+                    aaptOptions {
+                        cruncherEnabled = false
+                    }
+                }
+            }
+        }
     }
 }
