@@ -15,7 +15,7 @@ export const checkWalletsStyle = (
       marginTop: rs(20),
     },
     card: {
-      backgroundColor: '#d03434',
+      backgroundColor: '#922724',
       borderRadius: 8,
       overflow: 'hidden',
     },
