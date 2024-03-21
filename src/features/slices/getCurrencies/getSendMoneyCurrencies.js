@@ -11,6 +11,7 @@ export const sendMoneyCurrencies = createAsyncThunk(
   async obj => {
     const {token, URL} = obj;
     const response = await getInfo(token, URL);
+    console.log("This is the currency response 1"+JSON.stringify(response));
     return response;
   },
 );
@@ -25,6 +26,7 @@ const getSendMoneyCurrencies = createSlice({
     builder.addCase(
       sendMoneyCurrencies.fulfilled,
       (state, {payload: {response}}) => {
+        console.log("This is the currency response"+response);
         state.loading = false;
         state.data = response?.records;
       },

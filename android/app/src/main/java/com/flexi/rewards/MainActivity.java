@@ -1,4 +1,4 @@
-package com.flexi;
+package com.flexi.rewards;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;

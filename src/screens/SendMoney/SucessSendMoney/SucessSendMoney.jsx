@@ -69,7 +69,7 @@ const SucessSendMoney = props => {
       setAmount('');
       setSendMoney(initialState);
       setAddNote('');
-      const URL = `${config.BASE_URL_VERSION}/send-money/get-currencies`;
+      const URL = `${config.BASE_URL_VERSION}/v2/send-money/get-currencies`;
       dispatch(sendMoneyCurrencies({token, URL}));
       props.navigation.navigate(CREATE_SEND_MONEY);
       controlBackHandler?.remove();

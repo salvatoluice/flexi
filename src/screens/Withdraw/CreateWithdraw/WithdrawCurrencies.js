@@ -57,7 +57,7 @@ export async function GetCurrencies(
   currency,
   trans,
 ) {
-  const URL = `${config.BASE_URL_VERSION}/withdrawal/get-currencies`;
+  const URL = `${config.BASE_URL_VERSION}/v2/withdrawal/get-currencies`;
   const currenciesData = await dispatch(
     getWithdrawalCurrencies({URL, data, token, method: 'POST'}),
   );
